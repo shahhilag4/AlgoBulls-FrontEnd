@@ -1,11 +1,11 @@
-FrontEnd Task By AlgoBulls
-To-do Application by Hilag Shah | <a href="https://fttodoapp.netlify.app">DEMO</a>
+FrontEnd Task By AlgoBulls\
+# To-do Application by Hilag Shah | <a href="https://fttodoapp.netlify.app">DEMO</a>
 
-# Getting Started with Create React App
+## Requirements
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[x] Tasks should be displayed in a Tabular format, using the Ant Pro table component.
 
-## Available Scripts
+## How to setup the application 
 
 In the project directory, you can run:
 
