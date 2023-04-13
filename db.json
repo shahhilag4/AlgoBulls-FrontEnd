@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "serial":1,
+      "title": "Learn React",
+      "description": "Learn the basics of React and create a simple app",
+      "tags": ["react", "javascript"],
+      "status": "Open",
+      "date": "2023-04-13T12:00:00Z",
+      "due": "2023-04-30T12:00:00Z",
+    },
+    {
+      "id": 2,
+      "serial":2,
+      "title": "Write a blog post",
+      "description": "Write a blog post on the benefits of learning React",
+      "tags": ["react", "blogging"],
+      "status": "Open",
+      "date": "2023-04-13T12:00:00Z",
+      "due": "2023-04-20T12:00:00Z"
+    }
+  ]
+}

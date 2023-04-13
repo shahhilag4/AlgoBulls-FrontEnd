@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  padding: 15px;
+  border-radius: 10px;
+  width: 600px;
+}
+
+.input-container {
+  margin: 5px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container > h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.title_input,
+.due_input,
+.status_input {
+  height: 35px;
+  margin-bottom: 15px;
+}
+
+.due_input,
+.status_input {
+  width: 180px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+.title_input {
+  font-size: 16px;
+  height: 45px;
+}
+
+.desc_input {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.tags_input {
+  font-size: 16px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.title_input,
+.desc_input,
+.tags_input,
+.due_input,
+.status_input {
+  border: 1px solid #808080;
+  border-radius: 10px;
+  padding: 8px;
+  font-family: inherit;
+}
+
+.btn-container {
+  padding: 10px;
+  text-align: center;
+}
+
+.btn {
+  width: 120px;
+  height: 40px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.add_btn {
+  background-color: #34a0a4;
+}
+
+.add_btn:hover {
+  background-color: #ffffff;
+  border: 1px solid #34a0a4;
+  cursor:pointer;
+}
+
+.picker_input {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ant-input-group
+{
+  width:30% !important;
+  margin:0 auto !important;
+}
+
+.ant-table table
+{
+  width: 110% !important;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+    align-items: center;
+  }
+  .top-container {
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px auto;
+    width: 450px;
+  }
+  .btn-container {
+    flex-direction: row;
+  }
+  .table {
+    width: 100%;
+  }
+  .add_btn:hover,.add_btn:active {
+    background-color: #ffffff;
+    border: 1px solid #34a0a4;
+    cursor:pointer;
+}
+
+  
+}
