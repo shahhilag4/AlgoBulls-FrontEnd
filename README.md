@@ -17,6 +17,8 @@
 * [X] Mock API Data(need to follow step 1 i.e. "npm run mock api" to see data)
 * [X] Deploy Application and add comments to code
 
+**Note: I did not have a VISA credit card/debit card and thus failed to deploy on AWS,GCP or Azure.Thus I have deployed the application on Netlify.** 
+
 ## How to setup the application 
 
 In the project directory, you can run:
