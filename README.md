@@ -15,6 +15,7 @@
 * [X] User should be able to ADD,MODIFY,DELETE,FILTER,SORT the data
 * [X] Case insensitive search of tasks
 * [X] Mock API Data(need to follow step 1 i.e. "npm run mock api" to see data)
+* [X] Deploy Application and add comments to code
 
 ## How to setup the application 
 
@@ -24,7 +25,7 @@ In the project directory, you can run:
 
 This will install all the dependencies in node_modules folder
 
-#### `npm run mock-api`
+### `npm run mock-api`
 Runs the mock-api to feed data into our todo application.\
 The API will by default run on PORT 3001 [http://localhost:3001](http://localhost:3001) from where we fetch the JSON data and feed it into out ant-pro table.\
 Open a new console on completion and keep the current console running.

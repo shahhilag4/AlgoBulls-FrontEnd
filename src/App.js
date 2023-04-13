@@ -4,12 +4,13 @@ import { Table, Modal, Input } from "antd";
 import { useRef, useState, useEffect } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
+// Initial State functions
 function App() {
   const initialState = {
     id: Math.random() * 1000,
     serial: 0,
     title: "",
-    tags: [], // add tags property to initial state
+    tags: [],
     description: "",
     date: new Date().toLocaleTimeString(),
     due: "",
@@ -19,20 +20,21 @@ function App() {
   const [todoList, setTodoList] = useState(
     JSON.parse(localStorage.getItem("todoList")) || []
   ); // stores all todo data to display in table
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(""); //search query state
   const [isEditModal, setIsEditModal] = useState(false); // to open and close Modal
   const [editing, setEditing] = useState(""); // contains single task to edit
   const titleRef = useRef(); // to check if title is empty
   const descRef = useRef(); // to check if description is empty
   const tagsRef = useRef(); // to check if description is empty
 
+  //Fetching and updating table with mock data
   useEffect(() => {
     fetch("http://localhost:3001/todos")
       .then((response) => response.json())
       .then((data) => setTodoList(data));
   }, []);
 
-  /* HANDLES AND FUNCTIONS START */
+  // Handlers and Functions
   function handleTodoData(e) {
     const { name, value } = e.target;
     let tags;
@@ -53,11 +55,10 @@ function App() {
       date: new Date().toLocaleTimeString(),
     }));
   }
-  
-  function handleSearch(e) {
-  setSearchQuery(e.target.value);
-}
 
+  function handleSearch(e) {
+    setSearchQuery(e.target.value);
+  }
 
   function handleAddTodoList() {
     // to add tasks to table
@@ -111,7 +112,7 @@ function App() {
         }
       });
     });
-
+    // Saving Data in localStorage
     localStorage.setItem(
       "todoList",
       JSON.stringify(
@@ -145,11 +146,9 @@ function App() {
       [name]: name === "tags" ? tags : value,
     }));
   }
-  
 
-  /* HANDLES AND FUNCTIONS END */
-
-  /* TABLE COLUMNS START */
+  // Working With Ant-Pro Tables
+  //Creating Columns
   const columns = [
     {
       title: "Serial No.",
@@ -235,8 +234,8 @@ function App() {
       },
     },
   ];
-  /* TABLE COLUMNS END */
 
+  //HTML Rendering
   return (
     <div className="todo">
       <div className="top-container">
@@ -305,14 +304,14 @@ function App() {
         </div>
       </div>
       <Input.Search
-  placeholder="Search tasks"
-  onChange={handleSearch}
-  style={{ marginBottom: 16 }}
-/>
+        placeholder="Search tasks"
+        onChange={handleSearch}
+        style={{ marginBottom: 16 }}
+      />
       <Table
         dataSource={todoList.filter((item) =>
-    item.title.toLowerCase().includes(searchQuery.toLowerCase())
-  )}  
+          item.title.toLowerCase().includes(searchQuery.toLowerCase())
+        )}
         className="table"
         columns={columns}
         pagination={{ pageSize: 5 }}
@@ -338,14 +337,14 @@ function App() {
           value={editing.description}
           onChange={handleEditChange}
         />
-        
+
         <Input
           type="text"
           name="tags"
           value={editing.tags}
           onChange={handleEditChange}
         />
-        
+
         <Input
           type="date"
           name="due"
