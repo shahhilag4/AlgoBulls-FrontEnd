@@ -3,7 +3,7 @@ FrontEnd Task By AlgoBulls\
 
 ## Requirements
 
-[x] Tasks should be displayed in a Tabular format, using the Ant Pro table component.
+* [X] Tasks should be displayed in a Tabular format, using the Ant Pro table component.
 
 ## How to setup the application 
 
